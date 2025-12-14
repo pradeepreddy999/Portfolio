@@ -8,18 +8,24 @@ import {
   SheetTitle,
   SheetTrigger,
 } from "@/components/ui/sheet";
+import { cn } from "@/lib/utils";
 import { Menu } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 
 const navLinks = [
-  { name: "About", href: "/#about" },
-  { name: "Projects", href: "/projects" },
-  { name: "Blog", href: "/blog" },
-  { name: "Contact", href: "/contact" },
+  { name: "Home", href: "/", type: "link" },
+  { name: "About", href: "/#about", type: "scroll" }, // Anchor link
+  { name: "Projects", href: "/#projects", type: "scroll" },
+  { name: "Blog", href: "/blog", type: "link" }, // Actual page
+  { name: "Contact", href: "/#contact", type: "scroll" },
 ];
 
 const Header = () => {
+  const pathname = usePathname();
+  const isHome = pathname === "/";
+
   return (
     <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-backdrop-filter:bg-background/60">
       <div className="container mx-auto flex h-14 items-center justify-between px-4 md:px-6">
@@ -32,15 +38,22 @@ const Header = () => {
 
         {/* DESKTOP NAVIGATION */}
         <nav className="hidden md:flex items-center gap-6 text-sm font-medium">
-          {navLinks.map((link) => (
-            <Link
-              key={link.name}
-              href={link.href}
-              className="transition-colors text-muted-foreground hover:text-foreground"
-            >
-              {link.name}
-            </Link>
-          ))}
+          {navLinks.map((link) => {
+            return (
+              <Link
+                key={link.name}
+                href={link.href}
+                className={cn(
+                  "text-sm font-medium transition-colors hover:text-primary",
+                  pathname === link.href
+                    ? "text-foreground"
+                    : "text-muted-foreground",
+                )}
+              >
+                {link.name}
+              </Link>
+            );
+          })}
         </nav>
 
         {/* RIGHT SIDE ACTIONS */}
