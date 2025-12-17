@@ -1,4 +1,4 @@
-"use server";
+// "use server";
 
 // Use Zod if you want robust validation, but for now we'll do manual validation
 export async function sendContactForm(prevState: unknown, formData: FormData) {
