@@ -1,4 +1,3 @@
-import { Link, createFileRoute } from '@tanstack/react-router'
 import { ContactForm } from '#/components/contact-form'
 import { Badge } from '#/components/ui/badge'
 import { Button } from '#/components/ui/button'
@@ -10,6 +9,7 @@ import {
   CardTitle,
 } from '#/components/ui/card'
 import { projects } from '#/lib/data'
+import { Link, createFileRoute } from '@tanstack/react-router'
 import { ArrowRight, ArrowUpRight, Mail } from 'lucide-react'
 
 export const Route = createFileRoute('/')({
@@ -29,8 +29,8 @@ function Home() {
             <span className="text-primary">one pixel at a time.</span>
           </h1>
           <p className="mx-auto max-w-[700px] text-gray-500 md:text-xl dark:text-gray-400">
-            I&apos;m a Full Stack Developer passionate about building accessible,
-            pixel-perfect, and performant web experiences.
+            I&apos;m a Full Stack Developer passionate about building
+            accessible, pixel-perfect, and performant web experiences.
           </p>
         </div>
         <div className="flex gap-4">
@@ -39,7 +39,11 @@ function Home() {
               Contact Me <ArrowRight className="ml-2 h-4 w-4" />
             </Button>
           </a>
-          <a href="https://github.com/pradeepreddy999" target="_blank" rel="noopener noreferrer">
+          <a
+            href="https://github.com/pradeepreddy999"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             <Button variant="outline" size="lg">
               GitHub
             </Button>
@@ -212,7 +216,7 @@ function Home() {
                   className="text-muted-foreground hover:text-primary transition-colors"
                 >
                   <img
-                    src="/images/github-mark.svg"
+                    src={`${import.meta.env.BASE_URL}images/github-mark.svg`}
                     alt="GitHub"
                     width={24}
                     height={24}
@@ -226,7 +230,7 @@ function Home() {
                   className="text-muted-foreground hover:text-primary transition-colors"
                 >
                   <img
-                    src="/images/linkedin.svg"
+                    src={`${import.meta.env.BASE_URL}images/linkedin.svg`}
                     alt="LinkedIn"
                     width={24}
                     height={24}

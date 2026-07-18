@@ -1,5 +1,3 @@
-import { Link, useRouterState } from '@tanstack/react-router'
-import { Menu } from 'lucide-react'
 import { ModeToggle } from '#/components/mode-toggle'
 import { Button } from '#/components/ui/button'
 import {
@@ -9,6 +7,8 @@ import {
   SheetTrigger,
 } from '#/components/ui/sheet'
 import { cn } from '#/lib/utils'
+import { Link, useRouterState } from '@tanstack/react-router'
+import { Menu } from 'lucide-react'
 
 const navLinks = [
   { name: 'Home', to: '/' as const, hash: undefined },
@@ -55,7 +55,7 @@ export default function Header() {
             >
               <Button variant="ghost" size="icon">
                 <img
-                  src="/images/github-mark.svg"
+                  src={`${import.meta.env.BASE_URL}images/github-mark.svg`}
                   alt="GitHub"
                   width={20}
                   height={20}
@@ -70,7 +70,7 @@ export default function Header() {
             >
               <Button variant="ghost" size="icon">
                 <img
-                  src="/images/Twitter-X.svg"
+                  src={`${import.meta.env.BASE_URL}images/Twitter-X.svg`}
                   alt="Twitter / X"
                   width={20}
                   height={20}
@@ -110,7 +110,7 @@ export default function Header() {
                     rel="noopener noreferrer"
                   >
                     <img
-                      src="/images/github-mark.svg"
+                      src={`${import.meta.env.BASE_URL}images/github-mark.svg`}
                       alt="GitHub"
                       width={24}
                       height={24}
@@ -123,7 +123,7 @@ export default function Header() {
                     rel="noopener noreferrer"
                   >
                     <img
-                      src="/images/Twitter-X.svg"
+                      src={`${import.meta.env.BASE_URL}images/Twitter-X.svg`}
                       alt="Twitter / X"
                       width={24}
                       height={24}
