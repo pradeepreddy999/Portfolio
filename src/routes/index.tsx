@@ -28,7 +28,7 @@ function Home() {
             Building digital products, <br className="hidden sm:inline" />
             <span className="text-primary">one pixel at a time.</span>
           </h1>
-          <p className="mx-auto max-w-[700px] text-gray-500 md:text-xl dark:text-gray-400">
+          <p className="mx-auto max-w-175 text-gray-500 md:text-xl dark:text-gray-400">
             I&apos;m a Full Stack Developer passionate about building
             accessible, pixel-perfect, and performant web experiences.
           </p>
@@ -119,7 +119,7 @@ function Home() {
           <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl">
             Featured Work
           </h2>
-          <p className="text-muted-foreground max-w-[600px]">
+          <p className="text-muted-foreground max-w-150">
             A selection of my favorite projects. Check out the case studies to
             learn how I built them.
           </p>
