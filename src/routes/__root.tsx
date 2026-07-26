@@ -19,8 +19,12 @@ export const Route = createRootRoute({
     meta: [
       { charSet: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { title: 'My Portfolio' },
-      { name: 'description', content: "Pradeep's personal portfolio" },
+      { title: 'Pradeep Palavalli — Full Stack Developer' },
+      {
+        name: 'description',
+        content:
+          "Pradeep Palavalli's personal portfolio — Full Stack Developer specializing in React, TypeScript, and .NET.",
+      },
     ],
     links: [{ rel: 'stylesheet', href: appCss }],
   }),
@@ -77,7 +81,10 @@ function RootDocument({ children }: { children: React.ReactNode }) {
         <TanStackDevtools
           config={{ position: 'bottom-right' }}
           plugins={[
-            { name: 'Tanstack Router', render: <TanStackRouterDevtoolsPanel /> },
+            {
+              name: 'Tanstack Router',
+              render: <TanStackRouterDevtoolsPanel />,
+            },
           ]}
         />
         <Scripts />

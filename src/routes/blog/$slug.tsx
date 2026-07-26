@@ -1,20 +1,20 @@
+import { getPost } from '#/lib/blog'
 import { Link, createFileRoute, notFound } from '@tanstack/react-router'
 import { ArrowLeft, Calendar, Clock } from 'lucide-react'
 import Markdown from 'react-markdown'
-import { getPost } from '#/lib/blog'
 
 export const Route = createFileRoute('/blog/$slug')({
+  loader: ({ params }) => {
+    const post = getPost(params.slug)
+    if (!post) throw notFound()
+    return post
+  },
   head: ({ loaderData }) => ({
     meta: [
       { title: loaderData ? `${loaderData.title} | Blog` : 'Blog' },
       { name: 'description', content: loaderData?.excerpt ?? '' },
     ],
   }),
-  loader: ({ params }) => {
-    const post = getPost(params.slug)
-    if (!post) throw notFound()
-    return post
-  },
   component: BlogPostPage,
 })
 

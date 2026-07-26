@@ -1,26 +1,24 @@
-import { Link, createFileRoute, notFound } from '@tanstack/react-router'
-import { ArrowLeft, Code2, Globe } from 'lucide-react'
-import Markdown from 'react-markdown'
 import { Badge } from '#/components/ui/badge'
 import { Button } from '#/components/ui/button'
 import { getProject } from '#/lib/data'
+import { Link, createFileRoute, notFound } from '@tanstack/react-router'
+import { ArrowLeft, Code2, Globe } from 'lucide-react'
+import Markdown from 'react-markdown'
 
 export const Route = createFileRoute('/projects/$slug')({
-  head: ({ loaderData }) => ({
-    meta: [
-      {
-        title: loaderData
-          ? `${loaderData.title} | Projects`
-          : 'Projects',
-      },
-      { name: 'description', content: loaderData?.description ?? '' },
-    ],
-  }),
   loader: ({ params }) => {
     const project = getProject(params.slug)
     if (!project) throw notFound()
     return project
   },
+  head: ({ loaderData }) => ({
+    meta: [
+      {
+        title: loaderData ? `${loaderData.title} | Projects` : 'Projects',
+      },
+      { name: 'description', content: loaderData?.description ?? '' },
+    ],
+  }),
   component: ProjectPage,
 })
 

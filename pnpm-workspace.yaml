@@ -1,4 +1,6 @@
 allowBuilds:
   unrs-resolver: false
+minimumReleaseAgeExclude:
+  - lucide-react@1.27.0
 onlyBuiltDependencies:
   - tanstack

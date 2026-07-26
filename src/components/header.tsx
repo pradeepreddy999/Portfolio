@@ -18,6 +18,19 @@ const navLinks = [
   { name: 'Contact', to: '/' as const, hash: 'contact' },
 ]
 
+const socialLinks = [
+  {
+    name: 'GitHub',
+    href: 'https://github.com/pradeepreddy999',
+    icon: 'images/github-mark.svg',
+  },
+  {
+    name: 'Twitter / X',
+    href: 'https://twitter.com/yourusername',
+    icon: 'images/Twitter-X.svg',
+  },
+]
+
 export default function Header() {
   const pathname = useRouterState({ select: (s) => s.location.pathname })
 
@@ -25,7 +38,7 @@ export default function Header() {
     <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-backdrop-filter:bg-background/60">
       <div className="container mx-auto flex h-14 items-center justify-between px-4 md:px-6">
         <Link to="/" className="font-bold text-xl tracking-tight">
-          Portfolio<span className="text-primary">.</span>
+          Pradeep<span className="text-primary">.</span>
         </Link>
 
         <nav className="hidden md:flex items-center gap-6 text-sm font-medium">
@@ -48,36 +61,24 @@ export default function Header() {
 
         <div className="flex items-center gap-2">
           <div className="hidden sm:flex items-center gap-1">
-            <a
-              href="https://github.com/pradeepreddy999"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <Button variant="ghost" size="icon">
-                <img
-                  src={`${import.meta.env.BASE_URL}images/github-mark.svg`}
-                  alt="GitHub"
-                  width={20}
-                  height={20}
-                  className="dark:invert"
-                />
-              </Button>
-            </a>
-            <a
-              href="https://twitter.com/yourusername"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <Button variant="ghost" size="icon">
-                <img
-                  src={`${import.meta.env.BASE_URL}images/Twitter-X.svg`}
-                  alt="Twitter / X"
-                  width={20}
-                  height={20}
-                  className="dark:invert"
-                />
-              </Button>
-            </a>
+            {socialLinks.map((social) => (
+              <a
+                key={social.name}
+                href={social.href}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <Button variant="ghost" size="icon">
+                  <img
+                    src={`${import.meta.env.BASE_URL}${social.icon}`}
+                    alt={social.name}
+                    width={20}
+                    height={20}
+                    className="dark:invert"
+                  />
+                </Button>
+              </a>
+            ))}
           </div>
 
           <ModeToggle />
@@ -104,32 +105,22 @@ export default function Header() {
                 ))}
 
                 <div className="mt-4 flex gap-4">
-                  <a
-                    href="https://github.com/pradeepreddy999"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    <img
-                      src={`${import.meta.env.BASE_URL}images/github-mark.svg`}
-                      alt="GitHub"
-                      width={24}
-                      height={24}
-                      className="dark:invert"
-                    />
-                  </a>
-                  <a
-                    href="https://twitter.com/yourusername"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    <img
-                      src={`${import.meta.env.BASE_URL}images/Twitter-X.svg`}
-                      alt="Twitter / X"
-                      width={24}
-                      height={24}
-                      className="dark:invert"
-                    />
-                  </a>
+                  {socialLinks.map((social) => (
+                    <a
+                      key={social.name}
+                      href={social.href}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <img
+                        src={`${import.meta.env.BASE_URL}${social.icon}`}
+                        alt={social.name}
+                        width={24}
+                        height={24}
+                        className="dark:invert"
+                      />
+                    </a>
+                  ))}
                 </div>
               </div>
             </SheetContent>

@@ -1,5 +1,5 @@
 import { devtools } from '@tanstack/devtools-vite'
-import { defineConfig } from 'vite'
+import { defineConfig } from 'vitest/config'
 
 import { tanstackStart } from '@tanstack/react-start/plugin/vite'
 
@@ -17,6 +17,11 @@ const config = defineConfig({
     }),
     viteReact(),
   ],
+  test: {
+    environment: 'jsdom',
+    globals: true,
+    setupFiles: ['./src/test-setup.ts'],
+  },
 })
 
 export default config
