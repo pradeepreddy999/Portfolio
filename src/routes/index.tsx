@@ -30,8 +30,9 @@ function Home() {
             <span className="text-primary">one pixel at a time.</span>
           </h1>
           <p className="mx-auto max-w-175 text-gray-500 md:text-xl dark:text-gray-400">
-            I&apos;m a Full Stack Developer passionate about building
-            accessible, pixel-perfect, and performant web experiences.
+            I&apos;m a Software Engineer with 4+ years of experience building
+            scalable, data-driven retail and supply chain solutions with .NET
+            Core, React, and SQL Server.
           </p>
         </div>
         <div className="flex gap-4">
@@ -75,14 +76,20 @@ function Home() {
 
                 <div className="space-y-4 text-gray-500 dark:text-gray-400 text-lg leading-relaxed">
                   <p>
-                    I specialize in React, Next.js, and TypeScript. With over 4
-                    years of experience, I have a deep understanding of modern
-                    web architecture and UI/UX principles.
+                    I build and maintain full-stack applications using .NET
+                    Core Web API, React, and SQL Server, with a strong focus
+                    on retail solutions — including Walmart deductions
+                    management and store-specific order processing across the
+                    Walmart supply chain.
                   </p>
                   <p>
-                    When I&apos;m not coding, I&apos;m likely exploring new
-                    open-source tools, writing technical blogs, or contributing
-                    to the community.
+                    I&apos;m adept at full-stack development, system design,
+                    and performance optimization, with an emphasis on clean
+                    architecture, maintainability, and business impact. I
+                    spearheaded my company&apos;s first reusable React +
+                    TypeScript component library, published via Azure
+                    Artifacts and documented with Storybook to improve UI
+                    consistency across teams.
                   </p>
                 </div>
 
@@ -92,14 +99,16 @@ function Home() {
                   </h3>
                   <div className="flex flex-wrap gap-2">
                     {[
-                      'React 18, 19',
+                      'C#',
+                      '.NET Core Web API',
+                      'React.js',
                       'TypeScript',
-                      'Next.js 16',
-                      'Tailwind CSS v4',
-                      'BootStrap 5',
+                      'JavaScript ES6+',
+                      'Redux Toolkit',
                       'SQL Server',
-                      'ASP.NET MVC',
-                      '.NET 8',
+                      'jQuery',
+                      'Bootstrap',
+                      'MUI5',
                     ].map((tech) => (
                       <div
                         key={tech}
@@ -112,6 +121,85 @@ function Home() {
                 </div>
               </div>
             </div>
+          </div>
+        </section>
+      </Reveal>
+
+      {/* EXPERIENCE SECTION */}
+      <Reveal>
+        <section id="experience" className="py-24 container px-4 md:px-6 mx-auto">
+          <div className="flex flex-col items-center justify-center space-y-4 text-center mb-12">
+            <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl">
+              Experience
+            </h2>
+            <p className="text-muted-foreground max-w-150">
+              Where I&apos;ve worked and what I&apos;ve built.
+            </p>
+          </div>
+
+          <div className="mx-auto max-w-3xl space-y-6">
+            <Card>
+              <CardHeader>
+                <div className="flex flex-wrap items-center justify-between gap-2">
+                  <CardTitle className="text-xl">
+                    Software Engineer · Inventiz
+                  </CardTitle>
+                  <span className="text-sm text-muted-foreground">
+                    September 2021 – Present
+                  </span>
+                </div>
+              </CardHeader>
+              <CardContent>
+                <ul className="list-disc pl-5 space-y-2 text-gray-500 dark:text-gray-400">
+                  <li>
+                    Spearheaded the company&apos;s first reusable React +
+                    TypeScript component library, published via Azure
+                    Artifacts and documented with Storybook.
+                  </li>
+                  <li>
+                    Built and maintained full-stack applications using .NET
+                    Core Web API, React, and SQL Server for Walmart&apos;s
+                    supply chain and vendor deductions systems.
+                  </li>
+                  <li>
+                    Delivered retail analytics dashboards for Mars Grocery
+                    United, Mars Big Box, and Mars RGB, serving retailers
+                    including Kroger, HEB, Albertsons, and Publix.
+                  </li>
+                  <li>
+                    Ensured clean architecture, maintainability, and
+                    performance tuning for enterprise-grade software
+                    solutions.
+                  </li>
+                </ul>
+              </CardContent>
+            </Card>
+
+            <Card>
+              <CardHeader>
+                <div className="flex flex-wrap items-center justify-between gap-2">
+                  <CardTitle className="text-xl">
+                    Software Intern · Inventiz
+                  </CardTitle>
+                  <span className="text-sm text-muted-foreground">
+                    January 2021 – August 2021
+                  </span>
+                </div>
+              </CardHeader>
+              <CardContent>
+                <ul className="list-disc pl-5 space-y-2 text-gray-500 dark:text-gray-400">
+                  <li>
+                    Participated in code reviews and testing activities to
+                    learn software development best practices.
+                  </li>
+                  <li>
+                    Supported integration of retailer-specific business
+                    rules into analytics solutions and assisted in QA
+                    testing and post-production support.
+                  </li>
+                </ul>
+              </CardContent>
+            </Card>
           </div>
         </section>
       </Reveal>

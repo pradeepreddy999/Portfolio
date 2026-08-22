@@ -1,6 +1,6 @@
 # Portfolio
 
-Personal portfolio site for Pradeep Palavalli — Full Stack Developer.
+Personal portfolio site for Pradeep Palavalli — Software Engineer.
 
 Built with [TanStack Start](https://tanstack.com/start), React 19, Tailwind CSS v4, and shadcn/ui. Deployed as a static site to GitHub Pages via `.github/workflows/deploy.yml`.
 

@@ -52,18 +52,32 @@ function ProjectPage() {
           </span>
         </div>
 
-        <div className="flex gap-4">
-          <a href={project.githubUrl} target="_blank" rel="noopener noreferrer">
-            <Button>
-              <Code2 className="mr-2 h-4 w-4" /> View Source
-            </Button>
-          </a>
-          <a href={project.demoUrl} target="_blank" rel="noopener noreferrer">
-            <Button variant="outline">
-              <Globe className="mr-2 h-4 w-4" /> Live Demo
-            </Button>
-          </a>
-        </div>
+        {(project.githubUrl || project.demoUrl) && (
+          <div className="flex gap-4">
+            {project.githubUrl && (
+              <a
+                href={project.githubUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <Button>
+                  <Code2 className="mr-2 h-4 w-4" /> View Source
+                </Button>
+              </a>
+            )}
+            {project.demoUrl && (
+              <a
+                href={project.demoUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <Button variant="outline">
+                  <Globe className="mr-2 h-4 w-4" /> Live Demo
+                </Button>
+              </a>
+            )}
+          </div>
+        )}
       </div>
 
       <div className="aspect-video w-full bg-muted rounded-xl mb-12 flex items-center justify-center text-muted-foreground border">

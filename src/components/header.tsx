@@ -13,6 +13,7 @@ import { Menu } from 'lucide-react'
 const navLinks = [
   { name: 'Home', to: '/' as const, hash: undefined },
   { name: 'About', to: '/' as const, hash: 'about' },
+  { name: 'Experience', to: '/' as const, hash: 'experience' },
   { name: 'Projects', to: '/' as const, hash: 'projects' },
   { name: 'Blog', to: '/blog' as const, hash: undefined },
   { name: 'Contact', to: '/' as const, hash: 'contact' },
@@ -25,9 +26,9 @@ const socialLinks = [
     icon: 'images/github-mark.svg',
   },
   {
-    name: 'Twitter / X',
-    href: 'https://twitter.com/yourusername',
-    icon: 'images/Twitter-X.svg',
+    name: 'LinkedIn',
+    href: 'https://www.linkedin.com/in/pradeep-reddy-palavalli-70159818b/',
+    icon: 'images/linkedin.svg',
   },
 ]
 

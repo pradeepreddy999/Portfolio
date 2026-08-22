@@ -19,11 +19,11 @@ export const Route = createRootRoute({
     meta: [
       { charSet: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { title: 'Pradeep Palavalli — Full Stack Developer' },
+      { title: 'Pradeep Palavalli — Software Engineer' },
       {
         name: 'description',
         content:
-          "Pradeep Palavalli's personal portfolio — Full Stack Developer specializing in React, TypeScript, and .NET.",
+          "Pradeep Palavalli's personal portfolio — Software Engineer specializing in .NET Core, React, and SQL Server, building scalable retail and supply chain solutions.",
       },
     ],
     links: [{ rel: 'stylesheet', href: appCss }],
