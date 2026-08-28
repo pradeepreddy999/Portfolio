@@ -18,7 +18,7 @@ pnpm build
 pnpm preview
 ```
 
-The GitHub Pages deploy only uploads `dist/client` — the site must keep working as a **fully static** bundle (no server-only features like server functions that require a Node runtime).
+The GitHub Pages deploy only uploads `dist/client` — the site must keep working as a **fully static** bundle (no server-only features like server functions that require a Node runtime). `public/.nojekyll` is required so GitHub Pages skips Jekyll processing (the build emits underscore-prefixed asset files that Jekyll ignores by default).
 
 ## Testing
 
