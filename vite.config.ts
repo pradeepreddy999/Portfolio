@@ -7,7 +7,7 @@ import tailwindcss from '@tailwindcss/vite'
 import viteReact from '@vitejs/plugin-react'
 
 const config = defineConfig({
-  base: '/Portfolio/',
+  base: '/portfolio/',
   resolve: { tsconfigPaths: true },
   plugins: [
     devtools(),
